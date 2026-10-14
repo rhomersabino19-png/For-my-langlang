@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For my lovelove ♡</title>
+
+<style>
+:root {
+  --bg: #f5edff;
+  --purple: #8051b5;
+  --dark: #39204e;
+  --text: #59466a;
+  --pink: #f2dce9;
+  --white: #fffaff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.85;
+  background:
+    radial-gradient(circle at 10% 15%, #ffffff 0 2px, transparent 3px),
+    radial-gradient(circle at 85% 60%, #ffffffb0 0 2px, transparent 3px),
+    linear-gradient(135deg, #eee2ff, #fff5fb, #e5d8ff);
+  background-size: 75px 75px, 100px 100px, auto;
+}
+
+/* INTRO */
+
+.hero {
+  text-align: center;
+  padding: 75px 20px 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--purple);
+  text-transform: uppercase;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 4px;
+}
+
+h1 {
+  margin: 12px 0;
+  color: var(--dark);
+  font-size: clamp(40px, 8vw, 75px);
+  font-weight: normal;
+  line-height: 1.15;
+}
+
+.hero p {
+  margin: 0;
+  color: #846c98;
+  font-style: italic;
+}
+
+/* MUSIC PLAYER */
+
+.music {
+  position: relative;
+  z-index: 1;
+  width: min(480px, calc(100% - 32px));
+  margin: 10px auto 35px;
+  padding: 25px;
+  text-align: center;
+  background: #fffaffed;
+  border: 1px solid #ddc9ef;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px #51316d16;
+}
+
+.disc {
+  width: 75px;
+  height: 75px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+  background: linear-gradient(135deg, #b995e7, #7347a7);
+  box-shadow: 0 5px 20px #8051b544;
+}
+
+.music h2 {
+  margin: 0;
+  color: var(--dark);
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.music .artist {
+  margin: 0 0 14px;
+  color: #947aa8;
+  font: 12px Arial, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.play-button {
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  background: var(--purple);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.play-button:hover {
+  background: var(--dark);
+  transform: translateY(-2px);
+}
+
+.music small {
+  display: block;
+  margin-top: 12px;
+  font: 12px Arial, sans-serif;
+  color: #927da1;
+}
+
+/* LETTER */
+
+.letter {
+  position: relative;
+  z-index: 1;
+  width: min(820px, calc(100% - 30px));
+  margin: 0 auto 60px;
+  padding: clamp(25px, 6vw, 65px);
+  border: 1px solid #e4d4ef;
+  border-radius: 26px;
+  background: #fffaffef;
+  box-shadow: 0 20px 60px #49305e19;
+}
+
+.greeting {
+  color: var(--purple);
+  font-size: 24px;
+  font-style: italic;
+}
+
+.letter p {
+  overflow-wrap: anywhere;
+}
+
+.letter p:not(.greeting) {
+  margin-bottom: 24px;
+}
+
+.heart-divider {
+  text-align: center;
+  color: #b18bd1;
+  letter-spacing: 10px;
+  margin: 40px 0;
+}
+
+.signature {
+  text-align: center;
+  color: var(--purple);
+  font-size: 22px;
+  font-style: italic;
+}
+
+/* POLAROID BACKGROUND */
+
+.polaroids {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.polaroid {
+  position: absolute;
+  width: 150px;
+  padding: 9px 9px 30px;
+  background: #fffdfb;
+  box-shadow: 0 8px 24px #30203b25;
+  transform: rotate(var(--angle));
+  transition: transform .3s;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 120px;
+  display: block;
+  object-fit: cover;
+  background: #eadcff;
+}
+
+.polaroid span {
+  display: block;
+  padding-top: 9px;
+  color: #765c85;
+  text-align: center;
+  font-size: 11px;
+}
+
+.p1 {
+  top: 14%;
+  left: 2%;
+  --angle: -9deg;
+}
+
+.p2 {
+  top: 43%;
+  left: 1%;
+  --angle: 7deg;
+}
+
+.p3 {
+  top: 72%;
+  left: 3%;
+  --angle: -5deg;
+}
+
+.p4 {
+  top: 18%;
+  right: 2%;
+  --angle: 8deg;
+}
+
+.p5 {
+  top: 48%;
+  right: 1%;
+  --angle: -7deg;
+}
+
+.p6 {
+  top: 76%;
+  right: 3%;
+  --angle: 6deg;
+}
+
+/* FOOTER */
+
+.footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 20px 55px;
+  color: var(--dark);
+}
+
+.footer .heart {
+  font-size: 40px;
+  color: var(--purple);
+  animation: pulse 1.8s infinite;
+}
+
+.footer p {
+  font-style: italic;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.12); }
+}
+
+/* PHONE LAYOUT */
+
+@media (max-width: 700px) {
+  .polaroid {
+    width: 80px;
+    padding: 4px 4px 16px;
+    opacity: .38;
+  }
+
+  .polaroid img {
+    height: 65px;
+  }
+
+  .p2, .p3, .p5, .p6 {
+    display: none;
+  }
+
+  .letter {
+    padding: 25px 22px;
+  }
+
+  .hero {
+    padding-top: 50px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- POLAROID PHOTOS: put your photos in images/ -->
+<div class="polaroids">
+
+  <div class="polaroid p1">
+    <img src="photo1.jpg" alt="our memory">
+    <span>our little world ♡</span>
+  </div>
+
+  <div class="polaroid p2">
+    <img src="photo2.jpg" alt="our memory">
+    <span>my favorite person</span>
+  </div>
+
+  <div class="polaroid p3">
+    <img src="photo3.png" alt="our memory">
+    <span>just us ♡</span>
+  </div>
+
+  <div class="polaroid p4">
+    <img src="photo4.jpg" alt="our memory">
+    <span>sweet memories</span>
+  </div>
+
+  <div class="polaroid p5">
+    <img src="photo5.png" alt="our memory">
+    <span>my lovelove</span>
+  </div>
+
+  <div class="polaroid p6">
+    <img src="photo6.png" alt="our memory">
+    <span>always us ♡</span>
+  </div>
+
+</div>
+
+<header class="hero">
+  <div class="eyebrow">a letter from my heart...unsaid thoughts, feelings,...etc</div>
+  <h1>For my langlang</h1>
+  <p>The person who makes ordinary days special ♡</p>
+</header>
+
+<!-- LOCAL MP3 PLAYER -->
+<section class="music">
+  <div class="disc">♫</div>
+  <h2>Photograph</h2>
+  <p class="artist"> By ed sheeran</p>
+
+  <audio id="song" preload="metadata">
+    <source src="Photograph.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <button class="play-button" id="playButton">
+    ♡ play our song
+  </button>
+
+  <small id="musicStatus">a little music while you read</small>
+</section>
+
+<!-- YOUR LONG LOVE LETTER -->
+<main class="letter">
+
+  <p class="greeting">hi langlang ko ♡</p>
+
+  <p>lovelove, there are so many things i want to tell you, and sometimes i don't know how to put them into words. i just want you to know how much you mean to me and how thankful i am to have you in my life. you make my days better in ways you probably don't even notice, and even on difficult days, you're still someone i want to choose.</p>
+
+<p>one of the things i admire about you is how independent you are. i love that you can do things on your own and that you have your own way of handling life. but i hope you know that you don't always have to do everything alone. i'm your partner, and i want to be someone you can lean on whenever things get heavy. you don't have to be strong all the time when you're with me.</p>
+
+<p>and lovelove, there's one thing i really want us to work on: the way we handle arguments. whenever we have a problem and you become quiet, i start overthinking because i don't know what you're feeling or what's going through your mind. i hate silent arguments, not because i want to fight with you, but because i want us to understand each other. please, argue with me, i'm begging you. tell me when you're mad, when i've hurt you, or when something bothers you. i'd rather hear the truth than be left guessing what's wrong. i know sometimes you need space, and i'll respect that. i just hope we can always come back and talk things through instead of letting the silence grow between us.</p>
+
+<p>i know we're not perfect, and we won't always understand each other right away. there will be times when we make mistakes, get upset, or struggle to explain ourselves. but i hope we never forget that we're on the same team. it's never supposed to be me against you; it should always be us against the problem.</p>
+
+<p>thank you for being you, lovelove. thank you for staying, for loving me, and for being part of my life. i may not always express everything perfectly, but my feelings for you are real. i want to keep learning about you, growing with you, and loving you better every day. i don't expect us to be perfect. i just want us to keep choosing each other, especially when things aren't easy.</p>
+
+<p>i love you so much, lovelove, and i hope that whenever you read this, you'll remember that you have someone who genuinely wants to understand you, listen to you, and stay beside you. always remember that you don't have to face everything alone, because i'm here, and i'll keep choosing you.</p>
+
+  <div class="heart-divider">♡ · ♡ · ♡</div>
+
+  <p class="signature">
+    i'm really glad that it's you. ♡
+  </p>
+
+</main>
+
+<footer class="footer">
+  <div class="heart">♥</div>
+  <p>iloveyouuuu, always with sincerity.</p>
+  <p>mwahhh, my lovelove ♡</p>
+</footer>
+
+<script>
+const song = document.getElementById("song");
+const button = document.getElementById("playButton");
+const status = document.getElementById("musicStatus");
+
+button.addEventListener("click", async () => {
+  if (song.paused) {
+    try {
+      await song.play();
+      button.textContent = "♡ pause our song";
+      status.textContent = "playing just for you ♡";
+    } catch (error) {
+      status.textContent =
+        "check that music/Photograph.mp3 exists in your folder.";
+    }
+  } else {
+    song.pause();
+    button.textContent = "♡ play our song";
+    status.textContent = "paused for a little while ♡";
+  }
+});
+
+song.addEventListener("ended", () => {
+  button.textContent = "♡ play our song";
+  status.textContent = "play it again whenever you want ♡";
+});
+</script>
+
+</body>
+</html>
